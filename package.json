@@ -1,7 +1,7 @@
 {
   "name": "samjs-mongo-deletion",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "https://github.com/SAMjs/samjs-mongo-deletion",
   "author": {
     "name": "Paul Pflugradt",
@@ -11,8 +11,7 @@
   "engines": {
     "node": "*"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "atom-ui-reporter": "0.0.1",
     "chai": "^3.2.0",
