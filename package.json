@@ -14,9 +14,9 @@
   "dependencies": {},
   "devDependencies": {
     "atom-ui-reporter": "0.0.1",
-    "chai": "^3.2.0",
-    "coffee-script": "^1.9.3",
-    "mocha": "^2.2.5",
+    "chai": "^3.5.0",
+    "coffee-script": "^1.11.1",
+    "mocha": "^3.1.2",
     "samjs": "*",
     "samjs-client": "*",
     "samjs-mongo": "*",
@@ -26,5 +26,12 @@
   },
   "keywords": [],
   "readmeFilename": "README.md",
-  "scripts": {}
+  "scripts": {
+    "prebuild": "rimraf lib/",
+    "build": "coffee --no-header --compile --output lib/ src/*.coffee",
+    "test": "mocha",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish"
+  }
 }
